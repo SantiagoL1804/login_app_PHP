@@ -1,0 +1,209 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 60px;
+}
+
+/* HERO */
+
+body.index {
+  background-color: #282828;
+}
+
+body.index .hero {
+  background-image: url(../images/hero-BG-834543.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+body.index .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.562);
+  z-index: -1;
+}
+
+body.index .hero .hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+body.index .hero .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+body.index .hero .hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+body.index .hero .hero-content .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+body.index .hero .hero-content .hero-buttons .btn {
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: #ff6b6b;
+  transition: background-color 0.3s ease;
+}
+
+body.index .hero .hero-content .hero-buttons .btn:hover {
+  background-color: #fa3434;
+}
+
+/* END HERO */
+
+body.admin {
+  background-color: rgb(218, 237, 255);
+}
+
+/* FORM STYLING FOR LOGIN AND REGISTER */
+
+body.register {
+  background-color: rgb(255, 224, 224);
+}
+body.login {
+  background-color: rgb(251, 255, 230);
+}
+
+body.register .form-container,
+body.login .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.register form,
+body.login form {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.616);
+  width: 100%;
+  max-width: 400px;
+}
+
+body.register .form-container h2,
+body.login .form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+body.register form input:not([type="submit"]),
+body.login form input:not([type="submit"]) {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body.register form input[type="submit"],
+body.login form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+body.register form input[type="submit"]:hover,
+body.login form input[type="submit"]:hover {
+  background-color: #ff6b6b;
+}
+
+body.register form label,
+body.login form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* END FORM STYLING FOR LOGIN AND REGISTER */
+
+nav {
+  background-color: #333;
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  padding: 14px 20px;
+}
+
+nav ul li a:hover {
+  background-color: gray;
+}
+
+nav ul li a.active {
+  color: yellow;
+  background-color: gray;
+}
+
+.container {
+  margin: 10px;
+}
