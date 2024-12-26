@@ -25,11 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $error = "Username already exists";
         } else {
             // Hash password before inserting the data in database
-            $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password_hash', '$email')";
 
-            if (mysqli_query($conn, $sql)) {
+            if (check_query(create_user($conn, $username, $password, $email))) {
                 $_SESSION["logged in"] = true;
                 $_SESSION["username"] = $username;
                 redirect("admin.php");
